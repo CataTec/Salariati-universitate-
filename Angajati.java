@@ -1,68 +1,44 @@
 
-package universitate.main;
-
-import java.util.Scanner;
-
-
 public class Angajati {
-    
+
     int id;
     String nume;
     String prenume;
     int varsta;
     int venituri;
-     
-    public Angajati(int newID, String newNume, String newPrenume, int newVarsta,  int newVenituri){
+    boolean arerate;
+    int rate;
+    boolean cadruautomatica;
+
+    public Angajati(int newID, String newNume, String newPrenume, int newVarsta,  int newVenituri, boolean newArerate, int newRate,boolean newCadruAutomatica){
         id = newID;
         nume = newNume;
         prenume = newPrenume;
         varsta = newVarsta;
         venituri = newVenituri;
-    }    
-
-    
-    public int getID(){
-        return id;
-    }
-
-    public void setID(int newID){
-        id = newID;
-    }
-    
-    public String getNume(){
-        return nume;
-    }
-    
-    public void setNume(String newNume) {
-        nume = newNume;
-    }
-    
-    public String getName(){
-        return prenume;
-    }
-    
-    public void setPrenume(String newPrenume) {
-        prenume = newPrenume;
+        arerate = newArerate;
+        rate = newRate;
+        cadruautomatica = newCadruAutomatica;
     }
 
     public int getVarsta(){
         return varsta;
     }
-    
-    public void setVarsta(int newVarsta){
-        varsta = newVarsta;
-    }
-    
-    
+
     public double getVenituri(){
         return venituri;
     }
-    
-    public void setVenituri(int newVenituri){
-        venituri = newVenituri;
+
+    public boolean getArerate(){
+        return arerate;
     }
 
+    public boolean getCadruAutomatica(){
+        return cadruautomatica;
+    }
+
+
     public String toString(){
-        return id + " " + nume + " " + prenume + " " + varsta + " " + venituri;
+        return  id + "|" + nume + "|" + prenume + "|" + varsta + "|" + venituri + "|" + rate;
     }
 }
